@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Roboto:700&display=swap" rel="stylesheet">
+  </head>
+
+<body>
+    <section id="header">
+        <div class="nav_header">
+          <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link active nav-first" href="#">AKTUALNOŚCI</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">OFERTA</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#"><img class="logo" src="img/logo.png"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">GALERIA</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">LOKALE</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">KONTAKT</a>
+                </li>
+          </ul>
+        </div>
+        <div class="img_header"></div>
+      </section>
+
+      <section id="news">
+            <div class="container">
+                <div class="container">
+                    <div class="header_title">
+                        <h1 class="title_great">Co nowego?</h1>
+                        <h2 class="title_roboto">AKTUALNOŚCI</h2>
+                        <div class="hr_line"><img src="img/choragiewka.png"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6"><img class="news_image" src="img/fotkadoaktualnosci.png"></div>
+                        <div class="col-6">
+                            <p class="new_paragraf">Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym.
+                                Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym.
+                            </p>
+                        </div>
+                        <div class="col-12 col-12_right">
+                            <ul class="paginattion">
+                                <li class="pagin_hover"><a><img src="img/guzik_paginacji1.png"></a></li>
+                                <li class="pagin_hover"><a><img src="img/guzik_paginacji2.png"></a></li>
+                                <li class="pagin_hover"><a><img src="img/guzik_paginacji3.png"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="oferta">
+            <div class="container">
+                <div class="header_title">
+                    <h1 class="title_section">Nazwa</h1>
+                    <span class="title_h2">OFERTA</span>
+                    <div class="hr_line2"><img src="img/choragiewka.png"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 right_col no-margin">
+                        <img class="img_oferta" src="img/ciasta.png">
+                        <h3>CIASTA</h3>
+                    </div>
+                    <div class="col-md-6 center_col no-margin">
+                        <img class="img_oferta" src="img/torty.png">
+                            <h3>TORTY</h3>
+                    </div>
+                    <div class="col-md-6 right_col no-margin">
+                        <img class="img_oferta" src="img/ciastka1.png">
+                        <h3>CIASTKA</h3>
+                    </div>
+                    <div class="col-md-6 center_col no-margin">
+                        <img class="img_oferta" src="img/lody.png">
+                        <h3>LODY</h3>
+                    </div>
+                    <div class="col-12 col-12_end">
+                        <h1 class="end_oferta">Smacznego!</h1>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <section id="galeria">
+            <div class="container">
+                <div class="header_title">
+                    <h1 class="title_section">Cukiernia</h1>
+                    <span class="title_h2">GALERIA</span>
+                    <div class="hr_line2"><img src="img/choragiewka.png"></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 galery_col-12">
+                        <div class="portfolioFilter clearfix">
+                            <button class="btn active" onclick="filterSelection('lody')">LODY</button>
+                            <button class="btn" onclick="filterSelection('ciasta')">CIASTA</button>
+                            <button class="btn" onclick="filterSelection('desery')">DESERY</button>
+                        </div>
+                    </div>
+                        <div class="col-md-6 center_col_galery">
+                            <div class="content">
+                                <img src="img/fotkalodow2.png" alt="Lody">
+                            </div>
+                        </div>
+                        <div class="col-md-6 center_col_galery">
+                            <div class="content">
+                                <img src="img/fotkalodow.png" alt="Lody">
+                            </div>
+                          </div>
+                          <div class="col-md-6 center_col_galery">
+                            <div class="content">
+                                <img src="img/fotkalodow4.png" alt="Lody">
+                            </div>
+                          </div>
+                          <div class="col-md-6 center_col_galery">
+                            <div class="content">
+                                <img src="img/fotkalodow3.png" alt="Lody">
+                            </div>
+                          </div>
+                        <div class="col-12 center_col-12">
+                            <ul class="paginattion">
+                                <li class="pagin_hover"><a><img src="img/guzik_paginacji2.png"></a></li>
+                                <li class="pagin_hover"><a><img src="img/guzik_paginacji3.png"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="locale">
+                <div class="container">
+                    <div class="header_title">
+                        <h1 class="title_section">Nazwa</h1>
+                        <span class="title_h2">LOCALE</span>
+                        <div class="hr_line2"><img src="img/choragiewka.png"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <img class="locale_map" src="img/mapa.png">
+                        </div>
+                        <div class="col-6">
+                            <button id="up">⇑</button>
+                            <button id="down">⇓</button>
+                            <div class="page">
+                              <div class="section">Один</div>
+                              <div class="section" style="display:none;">Два</div>
+                              <div class="section" style="display:none;">Три</div>
+                              <div class="section" style="display:none;">Четыре</div>
+                            </div>
+                            <div class="page">
+                              <div class="section" style="display:none;">Пять</div>
+                              <div class="section" style="display:none;">Шесть</div>
+                              <div class="section" style="display:none;">Семь</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="title_section">Napisz do Nas</h1>
+                        <ul>
+                          <li>Telefon <span>517 101 671</span></li>
+                          <li>Godziny otwarcia <span>08:00-21:00</span></li>
+                          <li>cukiernia@oserialimoni.pl</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="footer">
+            <div class="container">
+                <p>STOPKA STRONY</p>
+            </div>
+        </section>
