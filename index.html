@@ -6,6 +6,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Roboto:700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue"></script>
   </head>
 
 <body>
@@ -13,29 +14,29 @@
         <div class="nav_header">
           <ul class="nav justify-content-center">
               <li class="nav-item">
-                <a class="nav-link active nav-first" href="#">AKTUALNOŚCI</a>
+                <a class="nav-link active nav-first" href="#app">AKTUALNOŚCI</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">OFERTA</a>
+                <a class="nav-link" href="#oferta">OFERTA</a>
               </li>
               <li class="nav-item">
                   <a class="nav-link" href="#"><img class="logo" src="img/logo.png"></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">GALERIA</a>
+                <a class="nav-link" href="#galeria">GALERIA</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#">LOKALE</a>
+                  <a class="nav-link" href="#locale">LOKALE</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">KONTAKT</a>
+                  <a class="nav-link" href="#contact">KONTAKT</a>
                 </li>
           </ul>
         </div>
         <div class="img_header"></div>
       </section>
 
-      <section id="news">
+      <section class="news" id="app">
             <div class="container">
                 <div class="container">
                     <div class="header_title">
@@ -44,17 +45,20 @@
                         <div class="hr_line"><img src="img/choragiewka.png"></div>
                     </div>
                     <div class="row">
-                        <div class="col-6"><img class="news_image" src="img/fotkadoaktualnosci.png"></div>
+                        <div class="col-6"><img class="news_image" v-bind:src="content.img" v-bind:alt="content.nameimg"></div>
                         <div class="col-6">
-                            <p class="new_paragraf">Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym.
-                                Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym.
+                            <p class="new_paragraf">
+                                {{ content.text }}
                             </p>
                         </div>
                         <div class="col-12 col-12_right">
                             <ul class="paginattion">
-                                <li class="pagin_hover"><a><img src="img/guzik_paginacji1.png"></a></li>
-                                <li class="pagin_hover"><a><img src="img/guzik_paginacji2.png"></a></li>
-                                <li class="pagin_hover"><a><img src="img/guzik_paginacji3.png"></a></li>
+                                    <li 
+                                    v-for="(content, index) in contents"
+                                    v-on:click="selectContent(index)"
+                                    v-bind:class="{'is-active': selectedCarIndex === index}"
+                                    class="is-active">{{ content.number }}
+                                    </li>         
                             </ul>
                         </div>
                     </div>
@@ -67,11 +71,11 @@
                 <div class="header_title">
                     <h1 class="title_section">Nazwa</h1>
                     <span class="title_h2">OFERTA</span>
-                    <div class="hr_line2"><img src="img/choragiewka.png"></div>
+                    <div class="hr_line2"><img class="oferta_img" src="img/choragiewka.png"></div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 right_col no-margin">
-                        <img class="img_oferta" src="img/ciasta.png">
+                        <a href="#window1"><img class="img_oferta" src="img/ciasta.png"></a>
                         <h3>CIASTA</h3>
                     </div>
                     <div class="col-md-6 center_col no-margin">
@@ -102,9 +106,9 @@
                 <div class="row">
                     <div class="col-12 galery_col-12">
                         <div class="portfolioFilter clearfix">
-                            <button class="btn active" onclick="filterSelection('lody')">LODY</button>
-                            <button class="btn" onclick="filterSelection('ciasta')">CIASTA</button>
-                            <button class="btn" onclick="filterSelection('desery')">DESERY</button>
+                            <button class="btn btn_galery active" onclick="filterSelection('lody')">LODY</button>
+                            <button class="btn btn_galery" onclick="filterSelection('ciasta')">CIASTA</button>
+                            <button class="btn btn_galery" onclick="filterSelection('desery')">DESERY</button>
                         </div>
                     </div>
                         <div class="col-md-6 center_col_galery">
@@ -188,3 +192,7 @@
                 <p>STOPKA STRONY</p>
             </div>
         </section>
+
+        <script src="js/news.js"></script>
+</body>
+</html>

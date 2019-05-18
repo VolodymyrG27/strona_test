@@ -54,7 +54,7 @@ html body{
 /*End Navigation*/
 
 /*NEWS*/
-#news{
+.news {
     padding: 105px 0 130px 0;
  }
  
@@ -93,17 +93,38 @@ html body{
      margin: 35px 0 0 0;
      text-align: right;
  }
- 
+
+ .style_button{
+    margin: 0;
+    padding: 0;
+ }
+
  .paginattion{
      margin: 0;
      padding: 0;
  }
+
+ .paginattion li {
+    background: #cfcfcf;
+ }
  
- .pagin_hover {
+ .is-active {
      list-style: none;
      display: inline-block;
      margin-right: 30px;
+     cursor: pointer;
+     color: white;
+     width: 30px;
+     text-transform: uppercase;
+     height: 30px;
+     border-radius: 25px; 
+     padding-top: 2px;
+     padding-right: 10px;
  }
+ .paginattion .is-active:hover {
+    background: #c1a691;
+ }
+
 
  /*End News*/
 
@@ -151,6 +172,12 @@ html body{
 
 .img_oferta{
     margin-bottom: 40px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.img_oferta:hover {
+    opacity: 1;
 }
 
 .col-12_end{
@@ -162,6 +189,9 @@ html body{
     font-size: 48px;
     font-family: 'Great Vibes', cursive;
 }
+
+
+
 
 /*end Oferta*/
 
@@ -180,7 +210,7 @@ html body{
     margin-bottom: 60px;
 }
 
-.btn {
+.btn_galery {
     border: none;
     outline: none;
     padding: 10px 16px;
@@ -190,11 +220,11 @@ html body{
     font-family: 'Roboto', sans-serif;
   }
 
-  .btn:hover {
+  .btn_galery:hover {
     background-color: #ae8c67;
   }
 
-  .btn.active {
+  .btn_galery.active {
     background-color: #ae8c67;
     color: white;
   }
