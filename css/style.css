@@ -11,12 +11,14 @@ html body{
 }
 
 /*Fonts*/
-@font-face{
-    font-family: "MyriadPro";
-    src: url(fonts/MYRIADPRO-REGULAR.OTF);
-    font-style: normal;
-    font-weight: normal;
-}
+    @font-face {
+        font-family: "MYRIADPRO";
+        src: url(../fonts/MYRIADPRO-REGULAR.OTF)
+    }
+    @font-face {
+        font-family: "MYRIADPRO-semi";
+        src: url(../fonts/MYRIADPRO-SEMIBOLD.OTF)
+    }
 /*EndFonts*/
 
 /*Navigation*/
@@ -50,12 +52,18 @@ html body{
     background-position: center;
     min-width: 100%;
     height: 600px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 /*End Navigation*/
 
 /*NEWS*/
 .news {
     padding: 105px 0 130px 0;
+ }
+
+ .header_title_first{
+    margin-left: 215px;
  }
  
  .title_great{
@@ -85,7 +93,7 @@ html body{
  }
  
  .new_paragraf{
-     font-family: 'MyriadPro';
+     font-family: 'MYRIADPRO';
      font-size: 16px;
  }
  
@@ -129,12 +137,21 @@ html body{
  /*End News*/
 
  /*Oferta*/
+
+ .container1{
+    width: 920px;
+    margin-right: auto;
+    margin-left: auto;
+ }
+
 #oferta{
     background-image: url(../img/tlooferty.png);
     background-position: center;
     background-size: cover;
     color: #fff;
-    padding: 105px 0 130px 0;
+    padding: 80px 0 55px 0;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
  }
 
  .title_section{
@@ -190,6 +207,11 @@ html body{
     font-family: 'Great Vibes', cursive;
 }
 
+.oferta_header{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px
+}
+
 /*MODALI WINDOW*/
 .modal-content{
     color:black;
@@ -200,7 +222,7 @@ html body{
 
 /*GALERY*/
 #galeria{
-    padding: 105px 0 60px 0;
+    padding: 120px 0 50px 0;
 }
 
 .galery_col-12{
@@ -216,7 +238,7 @@ html body{
 .btn_galery {
     border: none;
     outline: none;
-    margin: 4px;
+    margin: 25px;
     padding: 10px 16px;
     background-color: #ae8c67;
     cursor: pointer;
@@ -237,34 +259,11 @@ html body{
       text-align: center;
   }
 
-  /*.galery_choise {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  .increase:hover {
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
   }
-
-  .choise_li{
-    display: inline;
-    margin-right: 4px;
-    border: none;
-    outline: none;
-    padding: 10px 16px;
-    background-color: #ae8c67;
-    cursor: pointer;
-    color:white;
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
-  }
-
-  .choise_li:hover {
-    background-color: #ae8c67;
-  }
-
-  .choise_li.active {
-    background-color: #ae8c67;
-    color: red;*/
-
-  /*END GALERY*/
 
   /*LOCALE*/
   #locale{
@@ -272,7 +271,9 @@ html body{
     background-position: center;
     background-size: cover;
     color: #fff;
-    padding: 105px 0 130px 0;
+    padding: 105px 0 110px 0;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
   }
 
   .margin_col-6{
@@ -304,21 +305,25 @@ html body{
     opacity: 1;
   }
 
-
-
- 
-
-  
-
-
-
   /*END LOCALE*/
 
   /*CONTACT*/
     #contact{
         background-image: url(../img/contact.png);
         background-position: center;
-        padding: 105px 0 60px 0;
+        padding: 105px 0 95px 0;
+    }
+
+    .margin_list{
+        margin-top: 50px;
+        margin-left: 10px;
+    }
+
+    .contact_list{
+        font-family: 'MYRIADPRO';
+        font-size: 16px;
+        list-style: none;
+        line-height: 30px;
     }
   /*END CONTACT
 
@@ -332,7 +337,7 @@ html body{
     }
 
     #footer p{
-        font-family: 'MyriadPro';
+        font-family: 'MYRIADPRO-semi';
         font-size: 16px;
         padding-top: 20px;
         padding-bottom: 15px;

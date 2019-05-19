@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Roboto:700&display=swap" rel="stylesheet">
@@ -22,6 +23,7 @@
 
 <body>
     <section id="header">
+        <div class="container">
         <div class="nav_header">
             <ul class="nav justify-content-center">
                 <li class="nav-item">
@@ -44,65 +46,64 @@
                 </li>
             </ul>
         </div>
+    </div>
         <div class="img_header"></div>
     </section>
 
     <section class="news" id="app">
         <div class="container">
-            <div class="container">
-                <div class="header_title">
-                    <h1 class="title_great">Co nowego?</h1>
-                    <h2 class="title_roboto">AKTUALNOŚCI</h2>
-                    <div class="hr_line"><img src="img/choragiewka.png"></div>
+            <div class="header_title header_title_first">
+                <h1 class="title_great">Co nowego?</h1>
+                <h2 class="title_roboto">AKTUALNOŚCI</h2>
+                <div class="hr_line"><img src="img/choragiewka.png"></div>
+            </div>
+            <div class="row">
+                <div class="col-6"><img class="news_image" v-bind:src="content.img" v-bind:alt="content.nameimg">
                 </div>
-                <div class="row">
-                    <div class="col-6"><img class="news_image" v-bind:src="content.img" v-bind:alt="content.nameimg">
-                    </div>
-                    <div class="col-6">
-                        <p class="new_paragraf">
-                            {{ content.text }}
-                        </p>
-                    </div>
-                    <div class="col-12 col-12_right">
-                        <ul class="paginattion">
-                            <li v-for="(content, index) in contents" v-on:click="selectContent(index)"
-                                v-bind:class="{'is-active': selectedCarIndex === index}" class="is-active">
-                                {{ content.number }}
-                            </li>
-                        </ul>
-                    </div>
+                <div class="col-6">
+                    <p class="new_paragraf">
+                        {{ content.text }}
+                    </p>
+                </div>
+                <div class="col-12 col-12_right">
+                    <ul class="paginattion">
+                        <li v-for="(content, index) in contents" v-on:click="selectContent(index)"
+                            v-bind:class="{'is-active': selectedContentIndex === index}" class="is-active">
+                            {{ content.number }}
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="oferta">
-        <div class="container">
+        <div class="container1">
             <div class="header_title">
                 <h1 class="title_section">Nazwa</h1>
                 <span class="title_h2">OFERTA</span>
                 <div class="hr_line2"><img class="oferta_img" src="img/choragiewka.png"></div>
             </div>
             <div class="row">
-                <div class="col-md-6 right_col no-margin">
+                <div class="col-md-6 right_col">
                     <a data-toggle="modal" data-target="#exampleModalCenter1"><img class="img_oferta"
                             src="img/ciasta.png"></a>
-                    <h3>CIASTA</h3>
+                    <h3 class="oferta_header">CIASTA</h3>
                 </div>
                 <div class="col-md-6 center_col no-margin">
                     <a data-toggle="modal" data-target="#exampleModalCenter2"><img class="img_oferta"
                             src="img/torty.png"></a>
-                    <h3>TORTY</h3>
+                    <h3 class="oferta_header">TORTY</h3>
                 </div>
                 <div class="col-md-6 right_col no-margin">
                     <a data-toggle="modal" data-target="#exampleModalCenter3"><img class="img_oferta"
                             src="img/ciastka1.png"></a>
-                    <h3>CIASTKA</h3>
+                    <h3 class="oferta_header">CIASTKA</h3>
                 </div>
                 <div class="col-md-6 center_col no-margin">
                     <a data-toggle="modal" data-target="#exampleModalCenter4"><img class="img_oferta"
                             src="img/lody.png"></a>
-                    <h3>LODY</h3>
+                    <h3 class="oferta_header">LODY</h3>
                 </div>
                 <div class="col-12 col-12_end">
                     <h1 class="end_oferta">Smacznego!</h1>
@@ -201,7 +202,7 @@
 
     </section>
     <section id="galeria">
-        <div class="container">
+        <div class="container1">
             <div class="header_title">
                 <h1 class="title_section">Cukiernia</h1>
                 <span class="title_h2">GALERIA</span>
@@ -212,13 +213,11 @@
                     <div class="portfolioFilter clearfix">
                         <button v-for="(name, index) in groups" v-on:click="selectPhoto(name)"
                             class="btn btn_galery active">{{ name.name }}</button>
-                        <!--<button class="btn btn_galery">CIASTA</button>
-                            <button class="btn btn_galery">DESERY</button>-->
                     </div>
                 </div>
                 <div class="col-md-6 center_col_galery" v-for="img in paginatedData">
                     <div class="content">
-                        <img v-bind:src="img.src" v-bind:alt="img.alt">
+                        <img class="increase" v-bind:src="img.src" v-bind:alt="img.alt">
                     </div>
                 </div>
                 <div class="col-12 galery_col-12">
@@ -232,7 +231,7 @@
     </section>
 
     <section id="locale">
-        <div class="container">
+        <div class="container1">
             <div class="header_title">
                 <h1 class="title_section">Nazwa</h1>
                 <span class="title_h2">LOCALE</span>
@@ -252,14 +251,14 @@
     </section>
 
     <section id="contact">
-        <div class="container">
+        <div class="container1">
             <div class="row">
                 <div class="col-12">
                     <h1 class="title_section">Napisz do Nas</h1>
-                    <ul>
-                        <li>Telefon <span>517 101 671</span></li>
-                        <li>Godziny otwarcia <span>08:00-21:00</span></li>
-                        <li>cukiernia@oserialimoni.pl</li>
+                    <ul class="margin_list">
+                        <li class="contact_list">Telefon <strong>517 101 671</strong></li>
+                        <li class="contact_list">Godziny otwarcia <strong>08:00-21:00</strong></li>
+                        <li class="contact_list">cukiernia@oserialimoni.pl</li>
                     </ul>
                 </div>
             </div>
@@ -267,7 +266,7 @@
     </section>
 
     <section id="footer">
-        <div class="container">
+        <div class="container1">
             <p>STOPKA STRONY</p>
         </div>
     </section>
