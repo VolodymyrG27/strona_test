@@ -173,11 +173,11 @@ html body{
 .img_oferta{
     margin-bottom: 40px;
     cursor: pointer;
-    opacity: 0.6;
+    opacity: 1;
 }
 
 .img_oferta:hover {
-    opacity: 1;
+    opacity: 0.6;
 }
 
 .col-12_end{
@@ -190,8 +190,11 @@ html body{
     font-family: 'Great Vibes', cursive;
 }
 
-
-
+/*MODALI WINDOW*/
+.modal-content{
+    color:black;
+    padding: 20px 40px 20px 40px;
+}
 
 /*end Oferta*/
 
@@ -213,6 +216,7 @@ html body{
 .btn_galery {
     border: none;
     outline: none;
+    margin: 4px;
     padding: 10px 16px;
     background-color: #ae8c67;
     cursor: pointer;
@@ -233,6 +237,33 @@ html body{
       text-align: center;
   }
 
+  /*.galery_choise {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .choise_li{
+    display: inline;
+    margin-right: 4px;
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #ae8c67;
+    cursor: pointer;
+    color:white;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .choise_li:hover {
+    background-color: #ae8c67;
+  }
+
+  .choise_li.active {
+    background-color: #ae8c67;
+    color: red;*/
+
   /*END GALERY*/
 
   /*LOCALE*/
@@ -244,10 +275,66 @@ html body{
     padding: 105px 0 130px 0;
   }
 
+  .margin_col-6{
+      margin-top: 70px;
+  }
+
+  .margin_min_col-6{
+    margin-top: 35px;
+  }
+
   .locale_map{
     border: 1px solid white;
     padding: 10px 10px 10px 10px;
   }
+
+  .locale_li{
+    list-style: none;
+    border-bottom: 1px solid white;
+    padding: 30px
+  }
+
+  #up{
+    position: relative;
+    top: 0;
+    left: 100%;
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  #down{
+    position: relative;
+    top: 0;
+    left: 100%;
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  #up:hover {
+    opacity: 0.6;
+  }
+
+  #down:hover {
+    opacity: 0.6;
+  }
+
+  .arrow1{
+    margin-bottom: 35px;
+  }
+
+  .arrow2{
+    margin-top: 30px;
+  }
+
+  .locale_li {
+    list-style: none;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
+
+
 
   /*END LOCALE*/
 

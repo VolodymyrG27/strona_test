@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Roboto:700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/vue"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </head>
 
 <body>
@@ -75,19 +78,19 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 right_col no-margin">
-                        <a href="#window1"><img class="img_oferta" src="img/ciasta.png"></a>
-                        <h3>CIASTA</h3>
+                            <a data-toggle="modal" data-target="#exampleModalCenter1"><img class="img_oferta" src="img/ciasta.png"></a>
+                            <h3>CIASTA</h3>
                     </div>
                     <div class="col-md-6 center_col no-margin">
-                        <img class="img_oferta" src="img/torty.png">
-                            <h3>TORTY</h3>
+                            <a data-toggle="modal" data-target="#exampleModalCenter2"><img class="img_oferta" src="img/torty.png"></a>
+                        <h3>TORTY</h3>
                     </div>
                     <div class="col-md-6 right_col no-margin">
-                        <img class="img_oferta" src="img/ciastka1.png">
+                            <a data-toggle="modal" data-target="#exampleModalCenter3"><img class="img_oferta" src="img/ciastka1.png"></a>
                         <h3>CIASTKA</h3>
                     </div>
                     <div class="col-md-6 center_col no-margin">
-                        <img class="img_oferta" src="img/lody.png">
+                            <a data-toggle="modal" data-target="#exampleModalCenter4"><img class="img_oferta" src="img/lody.png"></a>
                         <h3>LODY</h3>
                     </div>
                     <div class="col-12 col-12_end">
@@ -95,6 +98,92 @@
                     </div>
                 </div>
             </div>
+            <!--Modal1-->
+            <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Ciasta które możesz kupić</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <ul>
+                              <li>SERNIK ŚWIĄTECZNY Z BRZOSKWINIAMI</li>
+                              <li>SZARLOTKA Z BUDYNIOWĄ PIANKĄ</li>
+                              <li>CIASTO "PUSZEK" Z TRUSKAWKAMI</li>
+                              <li>CZEKOLADOWA CHMURA Z TRUSKAWKAMI</li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Modal2-->
+            <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Torty które możesz kupić</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <ul>
+                              <li>TORT WĘGIERSKI</li>
+                              <li>TORT CZEKOLADOWY</li>
+                              <li>TORT MARCELLO</li>
+                              <li>CIASTA DYNIOWY</li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!--Modal3-->
+             <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Ciastka które możesz kupić</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <ul>
+                              <li>CIASTKA PONCZOWE</li>
+                              <li>CIASTKA ZE SKWARKAMI</li>
+                              <li>Ciastka musli</li>
+                              <li>Cake Pops</li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Modal4-->
+            <div class="modal fade" id="exampleModalCenter4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Lody które możesz kupić</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <ul>
+                              <li>Sorbety</li>
+                              <li>Lody wodne</li>
+                              <li>Lody jogurtowe</li>
+                              <li>Cremolatti</li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    
         </section> 
         <section id="galeria">
             <div class="container">
@@ -106,12 +195,12 @@
                 <div class="row">
                     <div class="col-12 galery_col-12">
                         <div class="portfolioFilter clearfix">
-                            <button class="btn btn_galery active" onclick="filterSelection('lody')">LODY</button>
-                            <button class="btn btn_galery" onclick="filterSelection('ciasta')">CIASTA</button>
-                            <button class="btn btn_galery" onclick="filterSelection('desery')">DESERY</button>
+                            <button class="btn btn_galery active">LODY</button>
+                            <button class="btn btn_galery">CIASTA</button>
+                            <button class="btn btn_galery">DESERY</button>
                         </div>
                     </div>
-                        <div class="col-md-6 center_col_galery">
+                    <div class="col-md-6 center_col_galery">
                             <div class="content">
                                 <img src="img/fotkalodow2.png" alt="Lody">
                             </div>
@@ -130,12 +219,7 @@
                             <div class="content">
                                 <img src="img/fotkalodow3.png" alt="Lody">
                             </div>
-                          </div>
-                        <div class="col-12 center_col-12">
-                            <ul class="paginattion">
-                                <li class="pagin_hover"><a><img src="img/guzik_paginacji2.png"></a></li>
-                                <li class="pagin_hover"><a><img src="img/guzik_paginacji3.png"></a></li>
-                            </ul>
+                           </div>
                         </div>
                     </div>
                 </div>
@@ -150,23 +234,19 @@
                         <div class="hr_line2"><img src="img/choragiewka.png"></div>
                     </div>
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-6 margin_col-6">
                             <img class="locale_map" src="img/mapa.png">
                         </div>
-                        <div class="col-6">
-                            <button id="up">⇑</button>
-                            <button id="down">⇓</button>
-                            <div class="page">
-                              <div class="section">Один</div>
-                              <div class="section" style="display:none;">Два</div>
-                              <div class="section" style="display:none;">Три</div>
-                              <div class="section" style="display:none;">Четыре</div>
-                            </div>
-                            <div class="page">
-                              <div class="section" style="display:none;">Пять</div>
-                              <div class="section" style="display:none;">Шесть</div>
-                              <div class="section" style="display:none;">Семь</div>
-                            </div>
+                        <div class="col-6 margin_min_col-6">
+                                <a id="up"><img class="arrow1" src="img/arrow_top.png"></a>
+                                <ul>
+                                    <li class="locale_li">1</li>
+                                    <li class="locale_li" style="display:none;">2</li>
+                                    <li class="locale_li" style="display:none;">3</li>
+                                    <li class="locale_li" style="display:none;">4</li>
+                                    <li class="locale_li" style="display:none;">5</li>
+                                </ul>
+                                <a id="down"><img class="arrow2" src="img/arrow_down.png"></a>
                         </div>
                     </div>
                 </div>
@@ -192,7 +272,8 @@
                 <p>STOPKA STRONY</p>
             </div>
         </section>
-
+        
         <script src="js/news.js"></script>
+        <script src="js/galery.js"></script>
 </body>
 </html>
