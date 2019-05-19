@@ -288,12 +288,6 @@ html body{
     padding: 10px 10px 10px 10px;
   }
 
-  .locale_li{
-    list-style: none;
-    border-bottom: 1px solid white;
-    padding: 30px
-  }
-
   #up{
     position: relative;
     top: 0;
@@ -310,29 +304,11 @@ html body{
     opacity: 1;
   }
 
-  #up:hover {
-    opacity: 0.6;
-  }
 
-  #down:hover {
-    opacity: 0.6;
-  }
 
-  .arrow1{
-    margin-bottom: 35px;
-  }
+ 
 
-  .arrow2{
-    margin-top: 30px;
-  }
-
-  .locale_li {
-    list-style: none;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    padding-top: 20px;
-    padding-bottom: 25px;
-  }
+  
 
 
 

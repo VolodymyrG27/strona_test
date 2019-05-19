@@ -1,279 +1,279 @@
 <!DOCTYPE html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="UTF-8">
     <title>Document</title>
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Roboto:700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/vue"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </head>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</head>
 
 <body>
     <section id="header">
         <div class="nav_header">
-          <ul class="nav justify-content-center">
-              <li class="nav-item">
-                <a class="nav-link active nav-first" href="#app">AKTUALNOŚCI</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#oferta">OFERTA</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#"><img class="logo" src="img/logo.png"></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#galeria">GALERIA</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#locale">LOKALE</a>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active nav-first" href="#app">AKTUALNOŚCI</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#contact">KONTAKT</a>
+                    <a class="nav-link" href="#oferta">OFERTA</a>
                 </li>
-          </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><img class="logo" src="img/logo.png"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#galeria">GALERIA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#locale">LOKALE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">KONTAKT</a>
+                </li>
+            </ul>
         </div>
         <div class="img_header"></div>
-      </section>
+    </section>
 
-      <section class="news" id="app">
-            <div class="container">
-                <div class="container">
-                    <div class="header_title">
-                        <h1 class="title_great">Co nowego?</h1>
-                        <h2 class="title_roboto">AKTUALNOŚCI</h2>
-                        <div class="hr_line"><img src="img/choragiewka.png"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6"><img class="news_image" v-bind:src="content.img" v-bind:alt="content.nameimg"></div>
-                        <div class="col-6">
-                            <p class="new_paragraf">
-                                {{ content.text }}
-                            </p>
-                        </div>
-                        <div class="col-12 col-12_right">
-                            <ul class="paginattion">
-                                    <li 
-                                    v-for="(content, index) in contents"
-                                    v-on:click="selectContent(index)"
-                                    v-bind:class="{'is-active': selectedCarIndex === index}"
-                                    class="is-active">{{ content.number }}
-                                    </li>         
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="oferta">
+    <section class="news" id="app">
+        <div class="container">
             <div class="container">
                 <div class="header_title">
-                    <h1 class="title_section">Nazwa</h1>
-                    <span class="title_h2">OFERTA</span>
-                    <div class="hr_line2"><img class="oferta_img" src="img/choragiewka.png"></div>
+                    <h1 class="title_great">Co nowego?</h1>
+                    <h2 class="title_roboto">AKTUALNOŚCI</h2>
+                    <div class="hr_line"><img src="img/choragiewka.png"></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 right_col no-margin">
-                            <a data-toggle="modal" data-target="#exampleModalCenter1"><img class="img_oferta" src="img/ciasta.png"></a>
-                            <h3>CIASTA</h3>
+                    <div class="col-6"><img class="news_image" v-bind:src="content.img" v-bind:alt="content.nameimg">
                     </div>
-                    <div class="col-md-6 center_col no-margin">
-                            <a data-toggle="modal" data-target="#exampleModalCenter2"><img class="img_oferta" src="img/torty.png"></a>
-                        <h3>TORTY</h3>
+                    <div class="col-6">
+                        <p class="new_paragraf">
+                            {{ content.text }}
+                        </p>
                     </div>
-                    <div class="col-md-6 right_col no-margin">
-                            <a data-toggle="modal" data-target="#exampleModalCenter3"><img class="img_oferta" src="img/ciastka1.png"></a>
-                        <h3>CIASTKA</h3>
-                    </div>
-                    <div class="col-md-6 center_col no-margin">
-                            <a data-toggle="modal" data-target="#exampleModalCenter4"><img class="img_oferta" src="img/lody.png"></a>
-                        <h3>LODY</h3>
-                    </div>
-                    <div class="col-12 col-12_end">
-                        <h1 class="end_oferta">Smacznego!</h1>
-                    </div>
-                </div>
-            </div>
-            <!--Modal1-->
-            <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Ciasta które możesz kupić</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          <ul>
-                              <li>SERNIK ŚWIĄTECZNY Z BRZOSKWINIAMI</li>
-                              <li>SZARLOTKA Z BUDYNIOWĄ PIANKĄ</li>
-                              <li>CIASTO "PUSZEK" Z TRUSKAWKAMI</li>
-                              <li>CZEKOLADOWA CHMURA Z TRUSKAWKAMI</li>
-                          </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--Modal2-->
-            <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Torty które możesz kupić</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          <ul>
-                              <li>TORT WĘGIERSKI</li>
-                              <li>TORT CZEKOLADOWY</li>
-                              <li>TORT MARCELLO</li>
-                              <li>CIASTA DYNIOWY</li>
-                          </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             <!--Modal3-->
-             <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Ciastka które możesz kupić</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          <ul>
-                              <li>CIASTKA PONCZOWE</li>
-                              <li>CIASTKA ZE SKWARKAMI</li>
-                              <li>Ciastka musli</li>
-                              <li>Cake Pops</li>
-                          </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Modal4-->
-            <div class="modal fade" id="exampleModalCenter4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Lody które możesz kupić</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          <ul>
-                              <li>Sorbety</li>
-                              <li>Lody wodne</li>
-                              <li>Lody jogurtowe</li>
-                              <li>Cremolatti</li>
-                          </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                    
-        </section> 
-        <section id="galeria">
-            <div class="container">
-                <div class="header_title">
-                    <h1 class="title_section">Cukiernia</h1>
-                    <span class="title_h2">GALERIA</span>
-                    <div class="hr_line2"><img src="img/choragiewka.png"></div>
-                </div>
-                <div class="row">
-                    <div class="col-12 galery_col-12">
-                        <div class="portfolioFilter clearfix">
-                            <button class="btn btn_galery active">LODY</button>
-                            <button class="btn btn_galery">CIASTA</button>
-                            <button class="btn btn_galery">DESERY</button>
-                        </div>
-                    </div>
-                    <div class="col-md-6 center_col_galery">
-                            <div class="content">
-                                <img src="img/fotkalodow2.png" alt="Lody">
-                            </div>
-                        </div>
-                        <div class="col-md-6 center_col_galery">
-                            <div class="content">
-                                <img src="img/fotkalodow.png" alt="Lody">
-                            </div>
-                          </div>
-                          <div class="col-md-6 center_col_galery">
-                            <div class="content">
-                                <img src="img/fotkalodow4.png" alt="Lody">
-                            </div>
-                          </div>
-                          <div class="col-md-6 center_col_galery">
-                            <div class="content">
-                                <img src="img/fotkalodow3.png" alt="Lody">
-                            </div>
-                           </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="locale">
-                <div class="container">
-                    <div class="header_title">
-                        <h1 class="title_section">Nazwa</h1>
-                        <span class="title_h2">LOCALE</span>
-                        <div class="hr_line2"><img src="img/choragiewka.png"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6 margin_col-6">
-                            <img class="locale_map" src="img/mapa.png">
-                        </div>
-                        <div class="col-6 margin_min_col-6">
-                                <a id="up"><img class="arrow1" src="img/arrow_top.png"></a>
-                                <ul>
-                                    <li class="locale_li">1</li>
-                                    <li class="locale_li" style="display:none;">2</li>
-                                    <li class="locale_li" style="display:none;">3</li>
-                                    <li class="locale_li" style="display:none;">4</li>
-                                    <li class="locale_li" style="display:none;">5</li>
-                                </ul>
-                                <a id="down"><img class="arrow2" src="img/arrow_down.png"></a>
-                        </div>
-                    </div>
-                </div>
-        </section>
-
-        <section id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h1 class="title_section">Napisz do Nas</h1>
-                        <ul>
-                          <li>Telefon <span>517 101 671</span></li>
-                          <li>Godziny otwarcia <span>08:00-21:00</span></li>
-                          <li>cukiernia@oserialimoni.pl</li>
+                    <div class="col-12 col-12_right">
+                        <ul class="paginattion">
+                            <li v-for="(content, index) in contents" v-on:click="selectContent(index)"
+                                v-bind:class="{'is-active': selectedCarIndex === index}" class="is-active">
+                                {{ content.number }}
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="footer">
-            <div class="container">
-                <p>STOPKA STRONY</p>
+    <section id="oferta">
+        <div class="container">
+            <div class="header_title">
+                <h1 class="title_section">Nazwa</h1>
+                <span class="title_h2">OFERTA</span>
+                <div class="hr_line2"><img class="oferta_img" src="img/choragiewka.png"></div>
             </div>
-        </section>
-        
-        <script src="js/news.js"></script>
-        <script src="js/galery.js"></script>
+            <div class="row">
+                <div class="col-md-6 right_col no-margin">
+                    <a data-toggle="modal" data-target="#exampleModalCenter1"><img class="img_oferta"
+                            src="img/ciasta.png"></a>
+                    <h3>CIASTA</h3>
+                </div>
+                <div class="col-md-6 center_col no-margin">
+                    <a data-toggle="modal" data-target="#exampleModalCenter2"><img class="img_oferta"
+                            src="img/torty.png"></a>
+                    <h3>TORTY</h3>
+                </div>
+                <div class="col-md-6 right_col no-margin">
+                    <a data-toggle="modal" data-target="#exampleModalCenter3"><img class="img_oferta"
+                            src="img/ciastka1.png"></a>
+                    <h3>CIASTKA</h3>
+                </div>
+                <div class="col-md-6 center_col no-margin">
+                    <a data-toggle="modal" data-target="#exampleModalCenter4"><img class="img_oferta"
+                            src="img/lody.png"></a>
+                    <h3>LODY</h3>
+                </div>
+                <div class="col-12 col-12_end">
+                    <h1 class="end_oferta">Smacznego!</h1>
+                </div>
+            </div>
+        </div>
+        <!--Modal1-->
+        <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Ciasta które możesz kupić</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>SERNIK ŚWIĄTECZNY Z BRZOSKWINIAMI</li>
+                            <li>SZARLOTKA Z BUDYNIOWĄ PIANKĄ</li>
+                            <li>CIASTO "PUSZEK" Z TRUSKAWKAMI</li>
+                            <li>CZEKOLADOWA CHMURA Z TRUSKAWKAMI</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Modal2-->
+        <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Torty które możesz kupić</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>TORT WĘGIERSKI</li>
+                            <li>TORT CZEKOLADOWY</li>
+                            <li>TORT MARCELLO</li>
+                            <li>CIASTA DYNIOWY</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Modal3-->
+        <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Ciastka które możesz kupić</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>CIASTKA PONCZOWE</li>
+                            <li>CIASTKA ZE SKWARKAMI</li>
+                            <li>Ciastka musli</li>
+                            <li>Cake Pops</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Modal4-->
+        <div class="modal fade" id="exampleModalCenter4" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Lody które możesz kupić</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>Sorbety</li>
+                            <li>Lody wodne</li>
+                            <li>Lody jogurtowe</li>
+                            <li>Cremolatti</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="galeria">
+        <div class="container">
+            <div class="header_title">
+                <h1 class="title_section">Cukiernia</h1>
+                <span class="title_h2">GALERIA</span>
+                <div class="hr_line2"><img src="img/choragiewka.png"></div>
+            </div>
+            <div class="row">
+                <div class="col-12 galery_col-12">
+                    <div class="portfolioFilter clearfix">
+                        <button v-for="(name, index) in groups" v-on:click="selectPhoto(name)"
+                            class="btn btn_galery active">{{ name.name }}</button>
+                        <!--<button class="btn btn_galery">CIASTA</button>
+                            <button class="btn btn_galery">DESERY</button>-->
+                    </div>
+                </div>
+                <div class="col-md-6 center_col_galery" v-for="img in paginatedData">
+                    <div class="content">
+                        <img v-bind:src="img.src" v-bind:alt="img.alt">
+                    </div>
+                </div>
+                <div class="col-12 galery_col-12">
+                    <button v-for="page in pageCount + 1" v-on:click="goToPage(page - 1)"
+                        class="btn btn_galery active">{{ page }}</button>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="locale">
+        <div class="container">
+            <div class="header_title">
+                <h1 class="title_section">Nazwa</h1>
+                <span class="title_h2">LOCALE</span>
+                <div class="hr_line2"><img src="img/choragiewka.png"></div>
+            </div>
+            <div class="row">
+                <div class="col-6 margin_col-6">
+                    <img class="locale_map" src="img/mapa.png">
+                </div>
+                <div class="col-6 margin_min_col-6">
+                    <a id="up"><img class="arrow1" src="img/arrow_top.png"></a>
+
+                    <a id="down"><img class="arrow2" src="img/arrow_down.png"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="title_section">Napisz do Nas</h1>
+                    <ul>
+                        <li>Telefon <span>517 101 671</span></li>
+                        <li>Godziny otwarcia <span>08:00-21:00</span></li>
+                        <li>cukiernia@oserialimoni.pl</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="container">
+            <p>STOPKA STRONY</p>
+        </div>
+    </section>
+
+    <script src="js/news.js"></script>
+    <script src="js/galery.js"></script>
 </body>
+
 </html>
