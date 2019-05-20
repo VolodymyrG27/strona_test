@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="UTF-8">
     <title>Document</title>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Roboto:700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/vue"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
 </head>
 
 <body>
@@ -68,7 +67,7 @@
                 <div class="col-12 col-12_right">
                     <ul class="paginattion">
                         <li v-for="(content, index) in contents" v-on:click="selectContent(index)"
-                            v-bind:class="{'is-active': selectedContentIndex === index}" class="is-active">
+                            v-bind:class="{'is-active': selectedContentIndex === index}" class="page-number">
                             {{ content.number }}
                         </li>
                     </ul>
@@ -217,7 +216,8 @@
                 </div>
                 <div class="col-md-6 center_col_galery" v-for="img in paginatedData">
                     <div class="content">
-                        <img class="increase" v-bind:src="img.src" v-bind:alt="img.alt">
+                        <a v-bind:href="img.src" class="imgMag"><img class="increase" v-bind:src="img.src" v-bind:alt="img.alt" id="img_galery"></a>
+                    </div>
                     </div>
                 </div>
                 <div class="col-12 galery_col-12">
@@ -242,9 +242,22 @@
                     <img class="locale_map" src="img/mapa.png">
                 </div>
                 <div class="col-6 margin_min_col-6">
-                    <a id="up"><img class="arrow1" src="img/arrow_top.png"></a>
+                    <a id="up"><img class="arrow1" src="img/arrow_top.png" v-on:click="previous()"></a>
+                    <div class="locale_gps">
+                        <ul class="list_gps">
+                            <li class="list_inside" v-for="location in selectedLocations">
+                                <div>
+                                    <div>
+                                        {{location.name}}
+                                    </div>
+                                    <div>
 
-                    <a id="down"><img class="arrow2" src="img/arrow_down.png"></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <a id="down"><img class="arrow2" src="img/arrow_down.png" v-on:click="next()"></a>
                 </div>
             </div>
         </div>
@@ -273,6 +286,8 @@
 
     <script src="js/news.js"></script>
     <script src="js/galery.js"></script>
+    <script src="js/zoom.js"></script>
+    <script src="js/locale.js"></script>
 </body>
 
 </html>

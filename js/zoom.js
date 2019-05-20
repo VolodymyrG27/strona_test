@@ -1,0 +1,4 @@
+$(".imgMag").magnificPopup({
+    type : 'image',
+    
+});

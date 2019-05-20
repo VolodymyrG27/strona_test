@@ -103,3 +103,5 @@ var galery = new Vue({
         }
     }
 })
+
+
